@@ -17,6 +17,5 @@ var make = MyButton;
 
 export {
   make ,
-  
 }
 /* react Not a pure module */

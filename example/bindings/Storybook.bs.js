@@ -12,12 +12,10 @@ function createStory(title, decorators, _module, param) {
   var story = React.storiesOf(title, _module);
   List.iter((function (dec) {
           story.addDecorator(dec);
-          
         }), decorators);
   return {
           add: (function (name, c) {
               story.add(name, c);
-              
             })
         };
 }
@@ -77,7 +75,6 @@ function addMeta(csfStory, name, decorators, parameters, param) {
     decorators: Js_null_undefined.fromOption(decorators),
     parameters: Js_null_undefined.fromOption(parameters)
   };
-  
 }
 
 var CSF = {
@@ -94,6 +91,5 @@ export {
   Addons ,
   Action ,
   CSF ,
-  
 }
 /* @storybook/react Not a pure module */

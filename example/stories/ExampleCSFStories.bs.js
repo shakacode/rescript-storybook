@@ -33,6 +33,5 @@ export {
   $$default as default,
   renderButton ,
   knobTest ,
-  
 }
 /* default Not a pure module */

@@ -2,14 +2,13 @@
   "name": "rescript-storybook",
   "version": "2.0.1",
   "description": "ReScript bindings for Storybook.js",
-  "scripts": {
-    "build": "rescript build",
-    "dev": "rescript build -w",
-    "clean": "rescript clean"
-  },
   "homepage": "https://github.com/draftbit/rescript-storybook",
   "repository": "https://github.com/draftbit/rescript-storybook",
   "bugs": "https://github.com/draftbit/rescript-storybook/issues",
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
   "keywords": [
     "BuckleScript",
     "Storybook.js",
@@ -19,18 +18,39 @@
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "@rescript/react": "0.11.0",
-    "rescript": "10.1.3"
-  },
   "peerDependencies": {
-    "rescript": "^10.1",
     "@rescript/react": "^0.11",
-    "@storybook/addon-actions": "^5.2.3",
-    "@storybook/addon-knobs": "^5.3.14",
-    "@storybook/addon-links": "^5.2.3",
-    "@storybook/addon-options": "^5.3.14",
-    "@storybook/addons": "^5.2.3",
-    "@storybook/react": "^5.2.3"
+    "@storybook/addon-actions": "^6",
+    "@storybook/addon-knobs": "^6",
+    "@storybook/addon-links": "^6",
+    "@storybook/addon-options": "^6",
+    "@storybook/addons": "^6",
+    "@storybook/react": "^6",
+    "rescript": "^10.1"
+  },
+  "scripts": {
+    "build": "rescript build",
+    "watch": "rescript build -w",
+    "clean": "rescript clean",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@rescript/react": "0.11.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-knobs": "6.4.0",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addons": "6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rescript": "10.1.3"
   }
 }

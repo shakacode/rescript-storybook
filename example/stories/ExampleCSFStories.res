@@ -1,5 +1,3 @@
-open Storybook
-
 let default = CSF.make(~title="Reason CSF Story", ~decorators=[Knobs.withKnobs], ())
 
 let renderButton = () => <MyButton />
@@ -10,7 +8,7 @@ let knobTest = () => {
   let age = Knobs.number(
     ~label="Age",
     ~defaultValue=37.,
-    ~range={range: false, min: 19., max: 50., step: 1.},
+    ~rangeConfiguration={range: false, min: 19., max: 50., step: 1.},
     (),
   )
 

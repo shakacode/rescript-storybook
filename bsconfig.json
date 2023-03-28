@@ -3,13 +3,21 @@
   "namespace": "storybook",
   "version": "0.1.0",
   "sources": [
-    "src"
+    "src",
+    {
+      "dir": "example",
+      "type": "dev",
+      "subdirs": true
+    }
   ],
-  "bs-dependencies": [
-    "@rescript/react"
-  ],
-  "reason": {
-    "react-jsx": 3
+  "bs-dependencies": ["@rescript/react"],
+  "jsx": {
+    "version": 4,
+    "mode": "classic"
   },
-  "refmt": 3
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js"
 }

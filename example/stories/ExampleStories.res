@@ -1,5 +1,3 @@
-open Storybook
-
 open Story
 
 module Action = Storybook.Action
@@ -14,7 +12,7 @@ storiesOf("My First Reason Story", _module)
   let age = Knobs.number(
     ~label="Age",
     ~defaultValue=30.,
-    ~range={range: false, min: 19., max: 50., step: 1.},
+    ~rangeConfiguration={range: false, min: 19., max: 50., step: 1.},
     (),
   )
 
@@ -23,7 +21,7 @@ storiesOf("My First Reason Story", _module)
   <span onClick={Action.action("Test")}> {content->React.string} </span>
 })
 ->add("object knob test with Js.t", () => {
-  let obj = Knobs.object_(~label="User", ~defaultValue={"color": "grey"}, ())
+  let obj = Knobs.object(~label="User", ~defaultValue={"color": "grey"}, ())
 
   let style = ReactDOM.Style.make(~backgroundColor=obj["color"], ())
 
